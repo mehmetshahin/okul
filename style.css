@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Karla:wght@300&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;                         /*#*/
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background-color: #3C4048;
+    color: white;
+    padding: 0 100px;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top:40px;
+    align-items: center; /* logo menu ve button kısmını aynı hızada oluşturur*/
+}
+
+nav ul{
+    display: flex;  /*üst üste olan menu kısmını yan yana getirir*/
+    gap:40px; /*yan yana gelen menu kısmına boşluk oluşturur*/
+    list-style: none; /*menunun yanında oluşan noktaları kaldırır*/
+}
+
+nav ul li{
+    transition: all 0.5s; /*mouse çektiğimizde yavaş yavaş kaybolmasını sağlar*/
+}
+
+nav ul li:hover{
+    color:#00ABB3;  /*menunun yazı rengini oluşturur*/
+    cursor: pointer;  /*menü kısmının üzerine geldiğinde mouse şekline dönüşür*/ 
+    text-shadow: 2px 2px 10px #00ABB3; /*gölge oluşturur*/
+    transition: all 0.5s; 
+}
+
+nav h1{
+    font-size: 35px;
+}
+
+nav button{
+    padding: 8px 14px; /*buton içerisinin boşluğunu oluşturur*/
+    font-size: 17px;
+    border-radius: 30px;
+    color: white;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #15a3ca 52%, #2BFF88 90%);
+}
+
+/*slogan kısmı*/
+
+.hero{
+    margin-top: 100px; /*nav kısmı ile arasındaki boşluğu oluşturur*/
+    display: flex;    /*resim alt kısımdaydı yan yana hale getirdi*/
+    justify-content: space-between;
+}
+
+.slogan{
+    width: 700px;
+    /*border: 1px solid;*/
+    display: flex;  /*yazılar yanyana getirildi*/
+    flex-direction: column; /*alt alta getirildi*/
+    justify-content: space-between;
+}
+
+.slogan h1{
+    font-size: 70px;
+    line-height: 90px;
+}
+
+.slogan h1 span{
+    color: #00ABB3;
+}
+
+.desc{
+    margin-top: 50px;
+    display: flex;/*yazılar yanyana getirildi*/
+    align-items: center;
+    gap: 30px;
+}
+
+.desc a{
+
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    text-decoration: none; /*buton içerisindeki yazının alt çizgisini kaldırırız*/
+    padding: 40px; /*buton içerisi boşluğu ayarlarız*/
+    font-size: 18px;
+    text-align: center; /*buton içerisindeki yazı ortalanır*/
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #15a3ca 52%, #2BFF88 90%);
+
+
+}
+.hero img{
+    width: 600px;
+    height: 450px;
+}
+
+/*Markalar*/
+.markalar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+@media(min-width:1500px){
+    .markalar{
+        margin-top: 200px;
+    }
+}
+/*Drops kutucuğu*/
+.drops{
+    margin-top: 100px; /*drops kutucuğu ile markalar arasında boşluk belirledik*/
+   /* border: 1px solid white;*/ /*sınır koyulup durumu izleyebliriz*/
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.drops h1{
+    font-size: 40px;
+
+}
+
+.drops ul{
+    display: flex; /*menu kısmını yanyana getirir*/
+    list-style: none; /* menu kısmınınyanında bulunan noktaları kaldırır*/
+    gap: 40px;
+}
+
+.drops ul li{
+    background-color: gray;
+    border-radius: 30px;
+    padding: 10px;
+}
+.cards{
+    max-width: 900px;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap; /*çok önemli bir yapı*/
+    gap: 40px;
+    justify-content: space-around;
+}
+
+/*kart*/
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 260px;
+    padding: 20px;
+    color: black;
+}
+/*.card h3{}*/
+.card img{
+    width: 100%; /*300px şeklinde yazmıştık yüzdelik dilmde yazınca yıldızlı kısım tam sığdı*/
+}
+.value{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left img{
+    width: 20px;
+}
+.left p{
+    color: #00ABB3;
+}
+
+.time{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.time p{
+    background-color: rgb(192, 170, 170);
+    color: #00ABB3;
+    padding: 6px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.time button{
+    background-color: white;
+    border: none;
+    color: #00ABB3;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.time button:hover{
+    background-color: #00ABB3;
+    color: aliceblue;
+    /*border-radius: 20px;*/
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+
+.add{
+    /*body kısmında margin ve padding e 100px vermiştik(boşluk bırakmıştık) burada boşluk bırakmak 
+    istemediğimiz için margine - değer verdik*/
+
+    margin: -120px; 
+    width: 120vw;
+    min-height: 150px;
+    background-color: #00ABB3;
+    margin-top: 200px;
+    font-size: 136px;
+    line-height: 146px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    transform: rotate(-6deg);
+    text-shadow: 2px 2px 39px white;
+    }
+
+    .infos1{
+        margin-top: 300px;
+        min-width: 600px;
+        min-height: 600px;
+
+    }
+
+    .infos1 h1{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .info1{
+        display: flex;
+        gap: 20px;
+    }
+
+    .bilgi{
+        min-width: 300px;
+        max-width: 500px;
+        min-height: 200px;
+        background-color: rgb(92,0,173);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
